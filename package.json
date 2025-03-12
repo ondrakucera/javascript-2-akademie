@@ -1,0 +1,7 @@
+{
+  "name": "javascript-2-akademie",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
