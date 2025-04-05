@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script type="module" src="objekt-slovnik.js"></script>
+		<title>ReactGirls, JavaScript 2 akademie, lekce 5</title>
+	</head>
+	<body>
+		<main>
+			<h1>Objekt jako slovník</h1>
+
+			<section>
+				<p>Zadej do slovníku:</p>
+				<form id="slovnik-formular">
+					<label>Slovo česky: <input type="text" id="slovo-zdroj" required /></label>
+					<label>Slovo anglicky: <input type="text" id="slovo-cil" required /></label>
+					<button>Zadat</button>
+				</form>
+			</section>
+
+			<section>
+				<ul id="obsah-slovniku"></ul>
+			</section>
+
+			<section>
+				<h2>Překladač</h2>
+				<p>Zadej slovo:</p>
+				<form id="prekladac-formular">
+					<label>Slovo česky: <input type="text" id="prekladac-vstup" required /></label>
+					<button>Přeložit</button>
+				</form>
+				<p id="prekladac-vysledek"></p>
+			</section>
+		</main>
+	</body>
+</html>
