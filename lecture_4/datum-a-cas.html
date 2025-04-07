@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" src="datum-a-cas.js"></script>
+		<title>ReactGirls, JavaScript 2 akademie, lekce 4</title>
+	</head>
+	<body>
+		<main>
+			<h1>Datum a čas</h1>
+
+			<section>
+				<p>Aktuální datum a čas je: <span id="aktualni-cas"></span>.</p>
+				<p>Dnes je <span id="dnesni-datum"></span>.</p>
+				<p>Od 1. 1. 1970 uplynulo <span id="aktualni-milisekundy"></span> ms.</p>
+			</section>
+
+			<hr />
+
+			<section>
+				<p>Zadej datum narození:</p>
+				<form id="narozeniny-formular">
+					<label>Den: <input type="number" id="narozeniny-den" required /></label>
+					<label>Měsíc: <input type="number" id="narozeniny-mesic" required /></label>
+					<label>Rok: <input type="number" id="narozeniny-rok" required /></label>
+					<button>Odeslat</button>
+				</form>
+				<ul id="narozeniny-vysledek"></ul>
+			</section>
+
+			<hr />
+
+			<section>
+				<p>Zadej datum narození:</p>
+				<form>
+					<label>Datum narození: <input type="date" id="narozeniny-datum" /></label>
+				</form>
+				<ul id="narozeniny-vysledek-podruhe"></ul>
+			</section>
+		</main>
+	</body>
+</html>
