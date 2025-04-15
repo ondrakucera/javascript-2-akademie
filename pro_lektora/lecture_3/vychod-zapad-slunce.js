@@ -8,6 +8,6 @@ nactiData("https://api.sunrise-sunset.org/json?lat=50.086389&lng=14.411944&tzid=
 		vychodZapadSeznam.innerHTML =
 			`<li>Slunce vychází v ${telo.results.sunrise}.</li>` + `<li>Slunce zapadá v ${telo.results.sunset}.</li>`;
 	})
-	.catch((duvod) => {
-		zpracujChybu(duvod);
+	.catch((chyba) => {
+		zpracujChybu(chyba);
 	});

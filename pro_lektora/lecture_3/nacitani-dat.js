@@ -10,7 +10,7 @@ export const nactiData = (adresa) =>
 
 // Funkce pro jednoduché zpracování chyby nastalé při komunikaci se serverem. Uživateli zobrazí dialogové okno s
 // omluvou a zároveň do vývojářské konzole zapíše informace o nastalé chybě.
-export const zpracujChybu = (duvod) => {
-	console.log("Chyba při načítání dat ze serveru.", duvod);
+export const zpracujChybu = (chyba) => {
+	console.log("Chyba při načítání dat ze serveru.", chyba);
 	alert("Omlouváme se. Došlo k chybě při načítání dat ze serveru.");
 };
