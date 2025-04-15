@@ -37,9 +37,10 @@ První probíranou oblastí (po krátkém opakování) jsou objekty. Cílem je p
 pojmenovanými atributy, abychom následně, ať už ve zbývajících lekcích, nebo i navazujících akademiích, mohli
 pracovat s poli objektů, které budeme filtrovat, řadit a následně zobrazovat uživateli.
 
-Uprostřed hodiny si účastníci instalují do VS Code rozšíření pro ESLint a Prettier. Je potřeba myslet na to, že
-zatímco rozšíření pro Prettier funguje rovnou samo, rozšíření pro ESLint vyžaduje, aby uživatel měl samotný ESLint
-nainstalován, takže je potřeba udělat i to.
+Uprostřed hodiny si účastníci instalují do VS Code rozšíření pro ESLint, Prettier a Editorconfig. Je potřeba myslet na
+to, že zatímco rozšíření pro Prettier a Editorconfig fungují rovnou samy, rozšíření pro ESLint vyžaduje, aby byl ESLint
+v projektu nainstalován. Z tohoto důvodu je celá tato repository z pohledu ESLintu jeden velký npm projekt, pro nějž je
+potřeba nainstalovat moduly.
 
 Potom se navazuje na úvodní povídání o funkcích z JavaScript 1 akademie a rozšiřují se znalosti zčásti o zápis
 funkcí šipkovou notací, ale především o princip předávání funkcí jako parametrů jiným funkcím. Cílem je dojít k
