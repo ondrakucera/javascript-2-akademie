@@ -59,7 +59,6 @@ nejvicVydelavajiciClovekElement.innerHTML = `Nejvíc vydělává ${nejvicVydelav
 // --------------------------------------------------
 
 // Přidání lidem s nižší mzdou
-
 const lidePredNavysenimElement = document.querySelector("#lide-pred-navysenim");
 const lidePoNavyseniElement = document.querySelector("#lide-po-navyseni");
 for (let i = 0; i < lide.length; i++) {
@@ -148,7 +147,6 @@ console.log("Pole druhých mocnin s využitím funkce map:", poleDruhychMocnin3)
 // --------------------------------------------------
 
 // Vypsání příjmení všech lidí
-
 const prijmeni = lide.map((clovek) => clovek.prijmeni);
 const prijmeniLidiElement = document.querySelector("#prijmeni-lidi");
 for (let i = 0; i < prijmeni.length; i++) {
@@ -158,6 +156,5 @@ for (let i = 0; i < prijmeni.length; i++) {
 // --------------------------------------------------
 
 // Vypsání celkových informací o všech lidech
-
 const informaceOLidechElement = document.querySelector("#informace-o-lidech");
 informaceOLidechElement.innerHTML = lide.map((clovek) => `<li>${zformatujCloveka(clovek)}</li>`).join("");
