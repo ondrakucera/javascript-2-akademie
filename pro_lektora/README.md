@@ -79,13 +79,6 @@ alespoň okrajově dozvěděli:
 - Oblasti platnosti proměnných.
 - Výchozí chování událostí a rušení tohoto chování.
 - Práce s časovými údaji pomocí _Date_.
-- Funkce _setInterval_ a _setTimeout_.
-- Použití objektů jako slovníků.
-- Podmínkový operátor.
-
-Úplný závěr obsahuje ukázku uvažování nad efektivitou programů prohledávajících velká množství dat. Cílem pochopitelně
-není formální definice asymptotické složitosti, ale především ukázat, že při programování může být potřeba nad takovýmito
-věcmi přemýšlet.
 
 ### Aplikace pro správu studentů školy
 

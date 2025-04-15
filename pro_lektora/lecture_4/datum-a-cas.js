@@ -48,9 +48,24 @@ narozeninyFormular.addEventListener("submit", (event) => {
 
 // --------------------------------------------------
 
-// Aktualizování na stránce zobrazeného času každých 100 ms
-const aktualniCasPrubezneElement = document.querySelector("#aktualni-cas-prubezne");
-setInterval(() => {
-	const aktualniCas = new Date();
-	aktualniCasPrubezneElement.innerHTML = aktualniCas.toLocaleString();
-}, 100);
+// Nalezení důležitých elementů na stránce pro druhou sekci s datem narození uživatele
+const narozeninyDatumPolicko = document.querySelector("#narozeniny-datum");
+const narozeninySeznamPodruhe = document.querySelector("#narozeniny-vysledek-podruhe");
+
+// Obsluha události změny políčka
+narozeninyDatumPolicko.addEventListener("change", () => {
+	// Vytvoření objektu pro datum a čas uživatelova data narození
+	const narozeninyDatum = new Date(narozeninyDatumPolicko.value);
+
+	// Spočtení uživatelova věku v milisekundách
+	const vekVMilisekundach = aktualniCas.getTime() - narozeninyDatum.getTime();
+
+	// Vypsání uživatelova věku v různých časových jednotkách do stránky
+	narozeninySeznamPodruhe.innerHTML =
+		`<li>Aktuálně je ti ${vekVMilisekundach} milisekund.</li>` +
+		`<li>Aktuálně je ti ${Math.floor(vekVMilisekundach / 1000)} sekund.</li>` +
+		`<li>Aktuálně je ti ${Math.floor(vekVMilisekundach / (1000 * 60))} minut.</li>` +
+		`<li>Aktuálně je ti ${Math.floor(vekVMilisekundach / (1000 * 60 * 60))} hodin.</li>` +
+		`<li>Aktuálně je ti ${Math.floor(vekVMilisekundach / (1000 * 60 * 60 * 24))} dní.</li>` +
+		`<li>Aktuálně je ti ${Math.floor(vekVMilisekundach / (1000 * 60 * 60 * 24 * 365))} let.</li>`;
+});
