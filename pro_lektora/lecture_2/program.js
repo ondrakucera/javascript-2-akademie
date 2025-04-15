@@ -48,7 +48,7 @@ informaceOLidechTabulka.innerHTML += lide.map((clovek) => vytvorRadekProCloveka(
 const mladiZamestnanciOdstavec = document.querySelector("#zamestnanci-do-30-let");
 mladiZamestnanciOdstavec.innerHTML = zamestnanci
 	.filter((zamestnanec) => zamestnanec.vek < 30)
-	.map((zamestnanec) => `${zamestnanec.jmeno} ${zamestnanec.prijmeni}`)
+	.map((zamestnanec) => `${zamestnanec.jmeno} ${zamestnanec.prijmeni} (${zamestnanec.vek})`)
 	.join(", ");
 
 // --------------------------------------------------
@@ -74,7 +74,7 @@ const mladiZamestnanciSerazeneOdstavec = document.querySelector("#zamestnanci-do
 mladiZamestnanciSerazeneOdstavec.innerHTML = zamestnanci
 	.filter((zamestnanec) => zamestnanec.vek < 30)
 	.toSorted((zamestnanec1, zamestnanec2) => zamestnanec1.vek - zamestnanec2.vek)
-	.map((zamestnanec) => `${zamestnanec.jmeno} ${zamestnanec.prijmeni}`)
+	.map((zamestnanec) => `${zamestnanec.jmeno} ${zamestnanec.prijmeni} (${zamestnanec.vek})`)
 	.join(", ");
 
 // --------------------------------------------------
