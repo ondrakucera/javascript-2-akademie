@@ -16,19 +16,25 @@
 				<p>Od 1. 1. 1970 uplynulo <span id="aktualni-milisekundy"></span> ms.</p>
 			</section>
 
+			<hr />
+
 			<section>
 				<p>Zadej datum narození:</p>
 				<form id="narozeniny-formular">
-					<label>Den: <input type="number" id="narozeniny-den" /></label>
-					<label>Měsíc: <input type="number" id="narozeniny-mesic" /></label>
-					<label>Rok: <input type="number" id="narozeniny-rok" /></label>
+					<label>Den: <input type="number" id="narozeniny-den" required /></label>
+					<label>Měsíc: <input type="number" id="narozeniny-mesic" required /></label>
+					<label>Rok: <input type="number" id="narozeniny-rok" required /></label>
 					<button>Odeslat</button>
 				</form>
 				<ul id="narozeniny-vysledek"></ul>
 			</section>
 
+			<hr />
+
 			<section>
-				<p>Aktuální datum a čas je: <span id="aktualni-cas-prubezne"></span>.</p>
+				<p>Zadej datum narození:</p>
+				<label>Datum narození: <input type="date" id="narozeniny-datum" /></label>
+				<ul id="narozeniny-vysledek-podruhe"></ul>
 			</section>
 		</main>
 	</body>
