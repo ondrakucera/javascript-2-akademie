@@ -47,9 +47,6 @@ tomu, jak funguje funkce _map_ na poli, a jak je tedy možné seznam nějakých 
 seznam řetězců obsahujících značky elementu _li_, který je pak možné použít pro naplnění _innerHTML_ elementu _ul_
 (popř. _ol_).
 
-Konkrétní domácí úkol z této lekce aktuálně neexistuje. Neformální doporučení zní znovu si ukázky z hodiny doma projít a
-zkusit si je mírně modifikovat.
-
 ### Filtrování, řazení
 
 V první části hodiny se představuje princip použití _export_ a _import_, aby bylo možné programy rozdělit do více
@@ -58,14 +55,6 @@ souborů.
 Hlavním obsahem lekce jsou ovšem iterační funkce nad polem: _forEach_, _filter_, _toSorted_ a _find_. Soubor
 _zamestnanci.js_ je potřeba účastníkům poskytnout přes Google Drive (neočekáváme u nich větší znalost ani Gitu, ani
 GitHubu).
-
-_Domácí úkol:_ rozšíření ukázky s tabulkou všech zaměstnanců o možnost filtrování.
-
-- Prvním krokem je nad tabulku přidat vstupní políčko pro příjmení (a pochopitelně ještě nějaké odesílací tlačítko), a 
-  ve chvíli, kdy uživatel nějaké příjmení zadá, profiltrovat vstupní data tak, aby následně v tabulce byli zobrazeni
-  pouze zaměstnanci tohoto příjmení. Jako rozšíření je pochopitelně možné dovolit filtrování nejenom na rovnost, ale i
-  třeba na podřetězec, případně s ignorováním velikosti písmen a podobně.
-- Druhým krokem je přidat podobné filtrování i přes oddělení.
 
 ### Načítání dat ze serveru
 
@@ -77,9 +66,6 @@ _zamestnanci.json_ a _organizacni-jednotky.json_ je potřeba účastníkům posk
 rovněž použita dvě veřejná HTTP API. Je důležité před samotnou hodinou (resp. lépe ještě před samotným během akademie)
 zkontrolovat, že tato dvě API stále fungují (a nezavedla třeba omezení z hlediska _CORS_). Pokud by už k použití nebyla,
 je potřeba včas najít nějaká jiná a použité ukázky patřičně upravit.
-
-Konkrétní domácí úkol z této lekce aktuálně neexistuje. Neformální doporučení zní znovu si ukázky z hodiny doma projít a
-zkusit si je mírně modifikovat.
 
 ### Asynchronní funkce, práce s časem
 
@@ -99,9 +85,6 @@ alespoň okrajově dozvěděli:
 Úplný závěr obsahuje ukázku uvažování nad efektivitou programů prohledávajících velká množství dat. Cílem pochopitelně
 není formální definice asymptotické složitosti, ale především ukázat, že při programování může být potřeba nad takovýmito
 věcmi přemýšlet.
-
-Konkrétní domácí úkol z této lekce aktuálně neexistuje. Neformální doporučení zní znovu si ukázky z hodiny doma projít a
-zkusit si je mírně modifikovat.
 
 ### Aplikace pro správu studentů školy
 
@@ -139,6 +122,11 @@ stihnout a i pro tyto vlastnosti byla použita pouze obyčejná textová vstupn�
 
 ## Poznámky
 
+- Na rozdíl od předchozích akademií pro tuto akademii nemáme zadání domácích úkolů. Můžeme se samozřejmě do budoucna
+  zamyslet, jestli bychom nějaká smysluplná zadání nedokázali vymyslet, ale tak či tak považujeme za nezbytné, aby
+  účastníci na této úrovni už dokázali sami sobě vymýšlet své vlastní úkoly. Toto je zároveň fakt, který je potřeba na
+  hodinách průběžně připomínat a ideálně i občas naznačit, jak by se některá z probraných ukázek dala následně rozvíjet
+  nebo modifikovat.
 - V javascriptových souborech se názvy všech proměnných a funkcí používají v češtině (respektive cestine). Může to
   působit zvláštně, ale je to zcela vědomé a léty prověřené rozhodnutí. Díky tomu je v jakémkoliv kusu kódu, kterému
   třeba účastník plně nerozumí, hned na první pohled zřejmé, kdy používáme něco, co je zabudováno v JavaScriptu
