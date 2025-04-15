@@ -13,6 +13,7 @@ Akademie se aktuálně skládá z pěti lekcí:
 1. _Načítání dat ze serveru._ Úvod do protokolu HTTP. Práce s funkcí _fetch_ a datovým typem _Promise_.
 1. _Asynchronní funkce, práce s časem._ Použití klíčových slov _await_ a _async_. Sada dalších drobnějších
   javascriptových témat.
+1. _Objekt jako slovník._ Použití objektu jako datové struktury slovník. Sada dalších drobnějších javascriptových témat.
 1. _Aplikace pro správu studentů školy._ Implementace jednoduché aplikace charakteru CRUD.
 
 ## Použité ukázky a jejich předpokládané využití
@@ -79,6 +80,21 @@ alespoň okrajově dozvěděli:
 - Oblasti platnosti proměnných.
 - Výchozí chování událostí a rušení tohoto chování.
 - Práce s časovými údaji pomocí _Date_.
+
+### Objekt jako slovník
+
+Hlavním obsahem lekce je použití objektu jako datové struktury slovník. Zbytek lekce je vyplněn sadou menších a
+vzájemně nesouvisejících témat, u kterých je ale vhodné, aby se o nich účastníci alespoň okrajově dozvěděli:
+
+- Podmínkový operátor.
+- Funkce _setInterval_ a _setTimeout_.
+- Destrukturalizace objektu.
+
+Soubory _zamestnanci.json_ a _organizacni-jednotky.json_ je potřeba účastníkům poskytnout přes Google Drive.
+
+Úplný závěr obsahuje ukázku uvažování nad efektivitou programů prohledávajících velká množství dat. Cílem pochopitelně
+není formální definice asymptotické složitosti, ale především ukázat, že při programování může být potřeba nad
+takovýmito věcmi přemýšlet.
 
 ### Aplikace pro správu studentů školy
 
