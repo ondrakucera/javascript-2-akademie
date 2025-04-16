@@ -42,7 +42,7 @@ export const deleteStudent = async (id) => {
 };
 
 // Funkce načte číselníky pro pohlaví, kolej a ročník.
-export const fetchCodeBooks = async () => {
+export const fetchCodebooks = async () => {
 	let gender;
 	let house;
 	let year;
