@@ -90,6 +90,8 @@ vzájemně nesouvisejících témat, u kterých je ale vhodné, aby se o nich ú
 - Funkce _setInterval_ a _setTimeout_.
 - Destrukturalizace objektu.
 
+Soubory _zamestnanci.json_ a _organizacni-jednotky.json_ je potřeba účastníkům poskytnout přes Google Drive.
+
 Úplný závěr obsahuje ukázku uvažování nad efektivitou programů prohledávajících velká množství dat. Cílem pochopitelně
 není formální definice asymptotické složitosti, ale především ukázat, že při programování může být potřeba nad
 takovýmito věcmi přemýšlet.
