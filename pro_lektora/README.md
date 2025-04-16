@@ -99,7 +99,7 @@ takovýmito věcmi přemýšlet.
 Poslední, celodenní lekce je věnována procvičování, a to v podobě aplikace charakteru _CRUD_, konkrétně pracující s
 databází studentů přes REST API.
 
-Před lekcí je potřeba vzít celý adresář _lecture\_5_, v něm z adresáře _students-client_ odstranit řešení, tedy všechny
+Před lekcí je potřeba vzít celý adresář _lecture\_6_, v něm z adresáře _students-client_ odstranit řešení, tedy všechny
 soubory kromě _serve.json_ (tento soubor je naopak nezbytné zachovat) a následně vše účastníkům poskytnout v zazipované
 podobě přes Google Drive.
 
@@ -124,10 +124,6 @@ V rámci tvorby aplikace je potřeba účastníkům představit několik drobný
 parametru z URL (pro obrazovky pracující s daty konkrétního studenta) a o používání dodatečných nastavení pro funkci
 _fetch_ (použití různých HTTP metod, posílání HTTP hlaviček).
 
-Původní očekávaná implementace aplikace počítala s použitím radio buttonů a elementu _select_ pro vlastnosti pohlaví,
-kolej a ročník, jak je naznačeno ve statických ukázkách v adresáři _vzor_, ale v předchozím běhu se toto nepodařilo
-stihnout a i pro tyto vlastnosti byla použita pouze obyčejná textová vstupní políčka.
-
 ## Poznámky
 
 - Na rozdíl od předchozích akademií pro tuto akademii nemáme zadání domácích úkolů. Můžeme se samozřejmě do budoucna
@@ -135,12 +131,12 @@ stihnout a i pro tyto vlastnosti byla použita pouze obyčejná textová vstupn�
   účastníci na této úrovni už dokázali sami sobě vymýšlet své vlastní úkoly. Toto je zároveň fakt, který je potřeba na
   hodinách průběžně připomínat a ideálně i občas naznačit, jak by se některá z probraných ukázek dala následně rozvíjet
   nebo modifikovat.
-- V javascriptových souborech se názvy všech proměnných a funkcí používají v češtině (respektive cestine). Může to
-  působit zvláštně, ale je to zcela vědomé a léty prověřené rozhodnutí. Díky tomu je v jakémkoliv kusu kódu, kterému
-  třeba účastník plně nerozumí, hned na první pohled zřejmé, kdy používáme něco, co je zabudováno v JavaScriptu
-  samotném (protože je to anglicky), a kdy používáme něco, co jsme si sami naprogramovali. Druhým pozitivním efektem je
-  to, že účastníci nemusejí tolik času trávit přemýšlením tím, jak něco vhodně anglicky pojmenovat (pro řadu z nich to
-  nemusí být jednoduché).
+- V javascriptových souborech se pro názvy všech proměnných a funkcí používají (kromě poslední lekce) v češtině
+  (respektive cestine). Může to působit zvláštně, ale je to zcela vědomé a léty prověřené rozhodnutí. Díky tomu je v
+  jakémkoliv kusu kódu, kterému třeba účastník plně nerozumí, hned na první pohled zřejmé, kdy používáme něco, co je
+  zabudováno v JavaScriptu samotném (protože je to anglicky), a kdy používáme něco, co jsme si sami naprogramovali.
+  Druhým pozitivním efektem je to, že účastníci nemusejí tolik času trávit přemýšlením tím, jak něco vhodně anglicky
+  pojmenovat (pro řadu z nich to nemusí být jednoduché).
 - V řadě lekcí se používá připravený seznam několika desítek zaměstnanců, ve kterém se pak v jednotlivých úlohách
   vyhledává. Tento seznam je vygenerován na základě nejčastějších českých jmen a příjmení z Wikipedie prográmkem
   umístěným v adresáři _data_. V tuto chvíli generátor není nikterak sofistikovaný, ale v případě potřeby je možné jej v

@@ -1,8 +1,9 @@
-import { fetchStudent } from "./rest-api-client.js";
+import { getCodebookItemName } from "./codebook.js";
+import { fetchCodebooks, fetchStudent } from "./rest-api-client.js";
 
 // Funkce vykreslující data studenta do připravené tabulky. Funkce rovněž modifikuje odkaz pro přechod na obrazovku
 // editace studenta.
-const renderStudent = (student) => {
+const renderStudent = (student, codebooks) => {
 	document.querySelector("#student-detail-table").innerHTML = `
 		<tbody>
 			<tr>
@@ -11,15 +12,15 @@ const renderStudent = (student) => {
 			</tr>
 			<tr>
 				<th>Gender</th>
-				<td>${student.gender}</td>
+				<td>${getCodebookItemName(codebooks.gender, student.gender)}</td>
 			</tr>
 			<tr>
 				<th>House</th>
-				<td>${student.house}</td>
+				<td>${getCodebookItemName(codebooks.house, student.house)}</td>
 			</tr>
 			<tr>
 				<th>Year</th>
-				<td>${student.year}</td>
+				<td>${getCodebookItemName(codebooks.year, student.year)}</td>
 			</tr>
 		</tbody>
 	`;
@@ -33,5 +34,7 @@ const renderStudent = (student) => {
 const id = new URLSearchParams(location.search).get("id");
 // Načtení studenta ze serveru
 const student = await fetchStudent(id);
+// Načtení číselníků ze serveru
+const codebooks = await fetchCodebooks();
 // Vykreslení obsahu tabulky s detailem studenta
-renderStudent(student);
+renderStudent(student, codebooks);

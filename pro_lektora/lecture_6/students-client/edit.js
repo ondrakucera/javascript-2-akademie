@@ -1,4 +1,4 @@
-import { fetchStudent, updateStudent } from "./rest-api-client.js";
+import { fetchCodebooks, fetchStudent, updateStudent } from "./rest-api-client.js";
 
 // Funkce zpracovávající odeslání formuláře.
 const handleSubmit = async (event, id) => {
@@ -8,7 +8,7 @@ const handleSubmit = async (event, id) => {
 	// Načtení upravených údajů studenta, jak je zadal uživatel
 	const firstName = document.querySelector("#first-name").value;
 	const lastName = document.querySelector("#last-name").value;
-	const gender = document.querySelector("#gender").value;
+	const gender = document.querySelector("#edit-form").gender.value;
 	const house = document.querySelector("#house").value;
 	const year = document.querySelector("#year").value;
 
@@ -20,8 +20,46 @@ const handleSubmit = async (event, id) => {
 	location.href = `detail.html?id=${id}`;
 };
 
+// Funkce vytvářející sadu radiobuttonů pro číselník pohlaví. Předvybrán je radiobutton odpovídající pohlaví daného
+// studenta.
+const getGenderRadioInputString = (student, cbGender) =>
+	cbGender
+		.map(
+			(gender) =>
+				"<label class=\"form-check-label\">" +
+				(student.gender === gender.code
+					? `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" checked /> ${gender.names.en}`
+					: `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" /> ${gender.names.en}`) +
+				"</label>"
+		)
+		.join("");
+
+// Funkce vytvářející combobox pro číselník kolejí. Předvybrána je položka odpovídající koleji daného studenta.
+const getHouseSelectString = (student, cbHouse) =>
+	"<select id=\"house\" class=\"form-select\">" +
+	cbHouse
+		.map((house) =>
+			student.house === house.code
+				? `<option value=${house.code} selected>${house.names.en}</option>`
+				: `<option value=${house.code}>${house.names.en}</option>`
+		)
+		.join("") +
+	"</select>";
+
+// Funkce vytvářející combobox pro číselník ročníků. Předvybrána je položka odpovídající ročníku daného studenta.
+const getYearSelectString = (student, cbYear) =>
+	"<select id=\"year\" class=\"form-select\">" +
+	cbYear
+		.map((year) =>
+			student.year === year.code
+				? `<option value=${year.code} selected>${year.names.en}</option>`
+				: `<option value=${year.code}>${year.names.en}</option>`
+		)
+		.join("") +
+	"</select>";
+
 // Funkce vykreslující data studenta do připravené tabulky.
-const renderStudent = (student) => {
+const renderStudent = (student, codebooks) => {
 	document.querySelector("#student-edit-table").innerHTML = `
 		<tbody>
 			<tr>
@@ -34,15 +72,15 @@ const renderStudent = (student) => {
 			</tr>
 			<tr>
 				<th>Gender</th>
-				<td><input id="gender" class="form-control" value="${student.gender}" /></td>
+				<td>${getGenderRadioInputString(student, codebooks.gender)}</td>
 			</tr>
 			<tr>
 				<th><label for="house" class="form-label">House</label></th>
-				<td><input id="house" class="form-control" value="${student.house}" /></td>
+				<td>${getHouseSelectString(student, codebooks.house)}</td>
 			</tr>
 			<tr>
 				<th><label for="year" class="form-label">Year</label></th>
-				<td><input id="year" class="form-control" value="${student.year}" /></td>
+				<td>${getYearSelectString(student, codebooks.year)}</td>
 			</tr>
 			<tr>
 				<td colspan="2"><button class="btn btn-primary">Save</button></td>
@@ -55,8 +93,10 @@ const renderStudent = (student) => {
 const id = new URLSearchParams(location.search).get("id");
 // Načtení studenta ze serveru
 const student = await fetchStudent(id);
-// Vykreslení obsahu tabulky s detailem studenta
-renderStudent(student);
+// Načtení číselníků ze serveru
+const codebooks = await fetchCodebooks();
+// Vykreslení obsahu tabulky s formulářem editace studenta
+renderStudent(student, codebooks);
 
 // Obsluha události odeslání formuláře
 document.querySelector("#edit-form").addEventListener("submit", (event) => {
