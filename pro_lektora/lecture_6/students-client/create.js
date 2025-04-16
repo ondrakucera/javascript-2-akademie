@@ -26,21 +26,21 @@ const getGenderRadioInputString = (cbGender) =>
 		.map(
 			(gender) =>
 				`<label class="form-check-label">
-					<input type="radio" name="gender" class="form-check-input" value="${gender.code}" /> ${gender.names.en}
+					<input type="radio" name="gender" class="form-check-input" value="${gender.code}" required /> ${gender.names.en}
 				</label>`
 		)
 		.join("");
 
 // Funkce vytvářející combobox pro číselník kolejí.
 const getHouseSelectString = (cbHouse) =>
-	"<select id=\"house\" class=\"form-select\">" +
+	"<select id=\"house\" class=\"form-select\" required>" +
 	"<option></option>" +
 	cbHouse.map((house) => `<option value=${house.code}>${house.names.en}</option>`).join("") +
 	"</select>";
 
 // Funkce vytvářející combobox pro číselník ročníků.
 const getYearSelectString = (cbYear) =>
-	"<select id=\"year\" class=\"form-select\">" +
+	"<select id=\"year\" class=\"form-select\" required>" +
 	"<option></option>" +
 	cbYear.map((item) => `<option value=${item.code}>${item.names.en}</option>`).join("") +
 	"</select>";
@@ -53,11 +53,11 @@ document.querySelector("#student-create-table").innerHTML = `
 	<tbody>
 		<tr>
 			<th><label for="first-name" class="form-label">First name</label></th>
-			<td><input id="first-name" class="form-control" /></td>
+			<td><input id="first-name" class="form-control" required /></td>
 		</tr>
 		<tr>
 			<th><label for="last-name" class="form-label">Last name</label></th>
-			<td><input id="last-name" class="form-control" /></td>
+			<td><input id="last-name" class="form-control" required /></td>
 		</tr>
 		<tr>
 			<th>Gender</th>

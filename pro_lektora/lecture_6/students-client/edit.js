@@ -28,15 +28,15 @@ const getGenderRadioInputString = (student, cbGender) =>
 			(gender) =>
 				"<label class=\"form-check-label\">" +
 				(student.gender === gender.code
-					? `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" checked /> ${gender.names.en}`
-					: `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" /> ${gender.names.en}`) +
+					? `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" required checked /> ${gender.names.en}`
+					: `<input type="radio" name="gender" class="form-check-input" value="${gender.code}" required /> ${gender.names.en}`) +
 				"</label>"
 		)
 		.join("");
 
 // Funkce vytvářející combobox pro číselník kolejí. Předvybrána je položka odpovídající koleji daného studenta.
 const getHouseSelectString = (student, cbHouse) =>
-	"<select id=\"house\" class=\"form-select\">" +
+	"<select id=\"house\" class=\"form-select\" required>" +
 	cbHouse
 		.map((house) =>
 			student.house === house.code
@@ -48,7 +48,7 @@ const getHouseSelectString = (student, cbHouse) =>
 
 // Funkce vytvářející combobox pro číselník ročníků. Předvybrána je položka odpovídající ročníku daného studenta.
 const getYearSelectString = (student, cbYear) =>
-	"<select id=\"year\" class=\"form-select\">" +
+	"<select id=\"year\" class=\"form-select\" required>" +
 	cbYear
 		.map((year) =>
 			student.year === year.code
@@ -64,11 +64,11 @@ const renderStudent = (student, codebooks) => {
 		<tbody>
 			<tr>
 				<th><label for="first-name" class="form-label">First name</label></th>
-				<td><input id="first-name" class="form-control" value="${student.firstName}" /></td>
+				<td><input id="first-name" class="form-control" value="${student.firstName}" required /></td>
 			</tr>
 			<tr>
 				<th><label for="last-name" class="form-label">Last name</label></th>
-				<td><input id="last-name" class="form-control" value="${student.lastName}" /></td>
+				<td><input id="last-name" class="form-control" value="${student.lastName}" required /></td>
 			</tr>
 			<tr>
 				<th>Gender</th>

@@ -23,27 +23,27 @@
 					<tbody>
 						<tr>
 							<th><label for="first-name" class="form-label">First name</label></th>
-							<td><input id="first-name" name="first-name" class="form-control" /></td>
+							<td><input id="first-name" name="first-name" class="form-control" required /></td>
 						</tr>
 						<tr>
 							<th><label for="last-name" class="form-label">Last name</label></th>
-							<td><input id="last-name" name="last-name" class="form-control" /></td>
+							<td><input id="last-name" name="last-name" class="form-control" required /></td>
 						</tr>
 						<tr>
 							<th>Gender</th>
 							<td>
 								<label class="form-check-label"
-									><input type="radio" name="gender" class="form-check-input" value="M" /> Male</label
+									><input type="radio" name="gender" class="form-check-input" value="M" required /> Male</label
 								>
 								<label class="form-check-label"
-									><input type="radio" name="gender" class="form-check-input" value="F" /> Female</label
+									><input type="radio" name="gender" class="form-check-input" value="F" required /> Female</label
 								>
 							</td>
 						</tr>
 						<tr>
 							<th><label for="house" class="form-label">House</label></th>
 							<td>
-								<select id="house" name="house" class="form-select">
+								<select id="house" name="house" class="form-select" required>
 									<option></option>
 									<option value="GRYFFINDOR">Gryffindor</option>
 									<option value="HUFFLEPUFF">Hufflepuff</option>
@@ -55,7 +55,7 @@
 						<tr>
 							<th><label for="year" class="form-label">Year</label></th>
 							<td>
-								<select id="year" name="year" class="form-select">
+								<select id="year" name="year" class="form-select" required>
 									<option></option>
 									<option value="1">First</option>
 									<option value="2">Second</option>
